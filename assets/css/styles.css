@@ -436,6 +436,19 @@ h4 { font-size: 1.25rem; }
   box-shadow: 0 8px 24px rgba(0,0,0,.35); transition: transform .15s ease;
 }
 .video-play:hover .play { transform: scale(1.07); }
+/* Poster for videos without a thumbnail (e.g. Loom): chart grid + title */
+.video-play-plain {
+  background-image:
+    radial-gradient(circle at 50% 45%, rgba(201,165,92,.18), transparent 55%),
+    linear-gradient(rgba(201,210,220,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,210,220,.06) 1px, transparent 1px);
+  background-size: auto, 28px 28px, 28px 28px;
+  align-content: center; gap: 14px;
+}
+.video-play .play-title {
+  position: relative; max-width: 85%;
+  font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--steel-200);
+}
 .video-play .play svg { width: 26px; height: 26px; margin-left: 4px; color: var(--navy-950); }
 .video-placeholder {
   position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 20px;

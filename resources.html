@@ -69,6 +69,8 @@
 
     <div class="filter-bar" data-filter-bar="#video-grid" role="group" aria-label="Filter videos by topic">
       <button class="chip" type="button" data-topic="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-topic="retirement" aria-pressed="false">Retirement</button>
+      <button class="chip" type="button" data-topic="planning" aria-pressed="false">Planning</button>
       <button class="chip" type="button" data-topic="military" aria-pressed="false">Military</button>
       <button class="chip" type="button" data-topic="pilots" aria-pressed="false">Pilots</button>
       <button class="chip" type="button" data-topic="tax" aria-pressed="false">Tax</button>
@@ -76,42 +78,50 @@
 
     <!--
       HOW TO ADD A VIDEO
-      1. Upload the video to YouTube (Public or Unlisted).
-      2. Copy the video ID: the part after "v=" in the link,
-         e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ  ->  dQw4w9WgXcQ
-      3. Copy one <article> below and put the ID in data-youtube="...".
-         Remove the <div class="video-placeholder">...</div> inside it.
-      4. data-topics can be any of: military pilots tax (space-separated).
+      Copy one <article class="video-card"> below and change:
+        - data-loom="..."    for Loom: the code at the end of the share link,
+                             e.g. loom.com/share/fa248dac...  ->  fa248dac...
+          or data-youtube="..." for YouTube: the part after "v=" in the link
+        - data-title, the meta line, <h3> title and <p> description
+        - data-topics: any of  retirement planning military pilots tax  (space-separated)
     -->
-    <div class="grid-3" id="video-grid">
-      <article class="video-card" data-topics="tax">
-        <div class="video-frame" data-youtube="" data-title="Roth conversion analysis walkthrough">
-          <div class="video-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>Video coming soon</div></div>
-        </div>
+    <div class="grid-2" id="video-grid">
+      <article class="video-card" data-topics="retirement">
+        <div class="video-frame" data-loom="fa248dacaedb4a71ac94ab29c53142ec" data-title="Income Lab demonstration"></div>
         <div class="body">
-          <div class="meta-line">Tax · Project example</div>
-          <h3>Roth conversion analysis walkthrough</h3>
-          <p>Placeholder: how I model multi-year conversions against your tax brackets.</p>
+          <div class="meta-line">Retirement · Software demo</div>
+          <h3>Income Lab demonstration</h3>
+          <p>Demonstration of retirement planning software.</p>
+          <p class="mb-0"><a href="https://www.loom.com/share/fa248dacaedb4a71ac94ab29c53142ec" target="_blank" rel="noopener">Open on Loom ↗</a></p>
         </div>
       </article>
-      <article class="video-card" data-topics="military">
-        <div class="video-frame" data-youtube="" data-title="Military retirement pension options">
-          <div class="video-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>Video coming soon</div></div>
-        </div>
+      <article class="video-card" data-topics="planning">
+        <div class="video-frame" data-loom="714864b1c06f4f739b492e486b298608" data-title="RightCapital demonstration"></div>
         <div class="body">
-          <div class="meta-line">Military · Plan example</div>
-          <h3>Military retirement pension options</h3>
-          <p>Placeholder: a sample walkthrough of the decisions around a military pension.</p>
+          <div class="meta-line">Planning · Software demo</div>
+          <h3>RightCapital demonstration</h3>
+          <p>Demonstration of financial planning software.</p>
+          <p class="mb-0"><a href="https://www.loom.com/share/714864b1c06f4f739b492e486b298608" target="_blank" rel="noopener">Open on Loom ↗</a></p>
         </div>
       </article>
-      <article class="video-card" data-topics="pilots tax">
-        <div class="video-frame" data-youtube="" data-title="Airline pilot retirement plan review">
+      <article class="video-card" data-topics="">
+        <div class="video-frame" data-title="Video 3">
           <div class="video-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>Video coming soon</div></div>
         </div>
         <div class="body">
-          <div class="meta-line">Pilots · Plan example</div>
-          <h3>Airline pilot retirement plan review</h3>
-          <p>Placeholder: reviewing pilot benefits and retirement plan options.</p>
+          <div class="meta-line">Placeholder</div>
+          <h3>Video 3</h3>
+          <p>Placeholder.</p>
+        </div>
+      </article>
+      <article class="video-card" data-topics="">
+        <div class="video-frame" data-title="Video 4">
+          <div class="video-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>Video coming soon</div></div>
+        </div>
+        <div class="body">
+          <div class="meta-line">Placeholder</div>
+          <h3>Video 4</h3>
+          <p>Placeholder.</p>
         </div>
       </article>
     </div>
