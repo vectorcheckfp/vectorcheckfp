@@ -5,7 +5,7 @@ Plain static site: HTML, CSS and a little JavaScript. No build step, so the fold
 ## Pages
 - `index.html`: Home
 - `services.html`: Services, pricing, process and FAQ
-- `resources.html`: Example videos and products (placeholders for now)
+- `resources.html`: Software demo videos (Loom)
 - `about.html`: About Ryan and contact details
 
 ## Files
@@ -15,11 +15,11 @@ Plain static site: HTML, CSS and a little JavaScript. No build step, so the fold
 - `docs/`: Form ADV Part 2 PDF
 
 ## Adding a video (resources.html)
-1. Upload the video to YouTube (Public or Unlisted).
-2. Copy the ID from the link: `https://www.youtube.com/watch?v=VIDEO_ID`.
-3. Put it in a card's `data-youtube="VIDEO_ID"` and delete that card's `<div class="video-placeholder">…</div>`.
+Copy one `<article class="video-card">` and change the title, description and video ID:
+- Loom: `data-loom="ID"`, where ID is the code at the end of `loom.com/share/ID`. Make sure the video is viewable by anyone with the link.
+- YouTube: `data-youtube="ID"`, where ID is the part after `v=` in the link.
+- `data-topics` controls which filter buttons show it (retirement, planning, tax).
 
-## Before launch
-- Replace the placeholder videos and products and delete the yellow "Draft" notice on `resources.html`.
+## Maintenance
 - When the ADV is updated, replace the PDF in `docs/` and update the link in every page's footer.
 - The header and footer are repeated in each page; edit all four when changing them.
