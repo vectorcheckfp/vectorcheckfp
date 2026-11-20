@@ -18,7 +18,6 @@ Plain static site: HTML, CSS and a little JavaScript. No build step, so the fold
 Copy one `<article class="video-card">` and change the title, description and video ID:
 - Loom: `data-loom="ID"`, where ID is the code at the end of `loom.com/share/ID`. Make sure the video is viewable by anyone with the link.
 - YouTube: `data-youtube="ID"`, where ID is the part after `v=` in the link.
-- `data-topics` controls which filter buttons show it (retirement, planning, tax).
 
 ## Maintenance
 - When the ADV is updated, replace the PDF in `docs/` and update the link in every page's footer.
